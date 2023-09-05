@@ -96,10 +96,6 @@ body{
         grid-column: 2 / 8;
     }
 
-    .main-form form input{
-        
-    }
-
     .main-form form small{
         font-size: 15px;
         color: #ccc;
