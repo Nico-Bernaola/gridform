@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,500&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.grid-container{
+    display: grid;
+    height: 100%;
+    width: auto;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-image: url('assets/bg.jpg');
+    background-size: cover;
+}
+
+.h1{
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, .2);
+    grid-column: 4 / 6;
+    grid-row: 3 / 7;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    color: #fff;
+}
+
+.main-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-form form .login{
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    height: 35px;
+    margin: 5px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.main-form form .login::placeholder{
+    color: #fff;
+}
+
+.main-form form .submit{
+    background-color: #fff;
+    border-radius: 40px;
+    height: 35px;
+    margin: 5px 20px;
+    font-weight: 700;
+}
+
+.main-form form input {
+    border-radius: 6px;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.main-form form small{
+    font-weight: 300;
+    text-align: center;
+    margin: 5px 20px;
+}
+
+.text-warning{
+    font-weight: 700;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px){
+    .grid-container{
+        background-image: url(assets/bg_small.jpg);
+        background-size: cover;
+        background-position: no-repeat;
+    }
+
+    .main-form{
+        grid-column: 2 / 8;
+    }
+
+    .main-form form input{
+        
+    }
+
+    .main-form form small{
+        font-size: 15px;
+        color: #ccc;
+    }
+
+    .main-form form small .text-warning{
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1330px) and (min-width: 500px){
+    .grid-container{
+        background-size: cover;
+    }
+
+    .main-form{
+        border: 8px solid #fff;
+        grid-column: 3 / 7;
+    }
+
+    .main-form .h1{
+        font-size: 30px;
+    }
+
+    .main-form form input{
+        height: 100%;
+        width: 100%;
+        font-size: 30px;
+    }
+}
